@@ -4,7 +4,7 @@ cache: yarn
 install: yarn install
 
 script:
-  - yarn test:e2e:run && yarn run build
+  - yarn run build
 
 deploy:
   provider: pages
