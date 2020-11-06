@@ -1,0 +1,49 @@
+import {
+  Meta,
+  Canvas,
+  Story,
+  ArgsTable,
+  Source,
+  Preview
+} from '@storybook/addon-docs/blocks'
+import App from '../../src/App'
+
+<Meta
+  title="MDX/App"
+  component={App}
+  argTypes={{
+    name: {
+      control: { type: 'text' },
+      description: 'Text of h1',
+      table: {
+        defaultValue: { summary: '-' }
+      }
+    },
+    color: {
+      control: { type: 'color' },
+      description: 'Color of h1',
+      table: {
+        defaultValue: { summary: '-' }
+      }
+    }
+  }}
+  parameters={{ layout: 'centered' }}
+/>
+
+export const Template = (args) => <App {...args} />
+
+# App
+
+<Preview mdxSource={'<App name="Daniel" color="black"/>'}>
+  <Story
+    name="app"
+    args={{
+      name: 'Daniel',
+      color: 'black'
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Preview>
+
+<ArgsTable story="app" />
