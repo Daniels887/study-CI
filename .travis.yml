@@ -4,7 +4,6 @@ cache: yarn
 install: yarn install
 
 script:
-  - yarn test:e2e:run
   - yarn run build
 
 deploy:
@@ -12,5 +11,5 @@ deploy:
   skip-cleanup: true
   github-token: $GITHUB_TOKEN
   local_dir: build
-  on:
+  only:
     branch: master
