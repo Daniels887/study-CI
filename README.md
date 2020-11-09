@@ -1,3 +1,3 @@
 <h3 align="center">Estudando Travis CI</h3>
 
-<samp align="center">Deploy Github Pages</samp>
+<h4 align="center"><samp>Deploy Github Pages</samp></h4>
